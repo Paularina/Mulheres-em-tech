@@ -1,14 +1,6 @@
-// Passo a Passo
-
-//1) Criar card vaga OK
-//2) Adicionar vagas no container OK
-//3) Criar card resumido da vaga OK
-//4) Adicionar o card resumido na área de vagas selecionadas OK
-//5) Remover o card da área de vagas selecionadas
 
 const section = document.querySelector("section")
 
-//1) Criar card vaga 
 function cardVaga(vaga) {
     const containerCard = document.createElement("div")
     containerCard.classList.add("cards-vagas", "bg-color-grey-6")
@@ -57,8 +49,6 @@ function listarVagas() {
 
 listarVagas()
 
-
-// ARRAY DE VAGAS SELECIONADAS
 let vagasSelecionadas = []
 const containerVagasSelecionadas = document.querySelector("#container-vagas-selecionadas")
 //3) Criar card resumido da vaga
@@ -83,7 +73,6 @@ function cardVagaSelecionada(vaga) {
     return card
 }
 
-//ADICIONAR UM ESCUTADOR
 section.addEventListener("click", function(event) {
     // console.log(event.target.tagName)
     const botao = event.target
@@ -109,22 +98,10 @@ function listarVagasSelecionadas() {
     }
 }
 
-//5) Remover o card da área de vagas selecionadas
 containerVagasSelecionadas.addEventListener("click", removerVaga)
 function removerVaga(event) {
     const botaoLixeira = event.target
     if (botaoLixeira.tagName == "BUTTON" || botaoLixeira.tagName == "IMG") {
         botaoLixeira.closest("li").remove()
-
-        //DICAS DE COMO REMOVER DO ARRAY
-        //procurar a vaga com o método find através do id do button 
-        // depois você vai procurar a posição (índice) dessa vaga no array de vagas selecionadas usando um método chamado indexOf
-        //depois remover a vaga com um outro método chamado splice 
-        //sintaxe do splice: nomeDoArray.splice(índice, 1)
-
-        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
-        
-        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
-
     }
 }
