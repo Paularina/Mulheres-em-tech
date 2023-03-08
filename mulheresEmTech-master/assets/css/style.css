@@ -1,5 +1,3 @@
-/* GERAL */
-
 .container {
   width: 1400px;
   margin: 0 auto;
@@ -9,8 +7,6 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f1f3f5;
 }
-
-/* HEADER */
 
 header {
   background-image: url(../img/header-bg.jpg);
@@ -52,8 +48,6 @@ h4 {
 a {
   text-decoration: none;
 }
-
-/* MAIN */
 
 #vagas {
   margin: 30px 0;
@@ -114,7 +108,6 @@ a {
   padding: 4px 12px 4px 12px;
 }
 
-/* ASIDE */
 aside {
   margin: 15px auto;
   width: 503px;
